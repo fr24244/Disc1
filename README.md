@@ -1,45 +1,45 @@
-# DigiLab ↔ Discord Integration via Node-RED
+# DigiLab ↔ Discord Integration mit Node-RED
 
-This project connects DigiLab with a Discord server using **Node-RED**.
+Dieses Projekt verbindet DigiLab mit einem Discord-Server mithilfe von **Node-RED**.
 
-##  What It Does
+##  Was das Projekt macht
 
-Whenever an event happens in DigiLab (like a new result, alert, or update), it sends a message automatically to a specific Discord channel.
+Sobald ein Ereignis in DigiLab passiert (z. B. ein neues Ergebnis oder eine Warnung), wird automatisch eine Nachricht in einem bestimmten Discord-Kanal gepostet.
 
-##  How It Works
+##  Wie es funktioniert
 
-- **Node-RED** listens for events from DigiLab.
-- It processes the data using custom logic.
-- Then, it sends a formatted message to Discord using a Webhook or a Discord bot.
+- **Node-RED** hört auf Ereignisse von DigiLab.
+- Die Daten werden im Flow verarbeitet.
+- Danach wird eine formatierte Nachricht an Discord gesendet – entweder über einen Webhook oder einen Bot.
 
-##  Requirements
+##  Voraussetzungen
 
-- Node-RED installed and running
-- Access to your DigiLab's API or event stream
-- A Discord bot or Webhook URL
-- Optional: JSON or HTTP nodes in Node-RED
+- Node-RED ist installiert und läuft
+- Zugriff auf die DigiLab-API oder Eventquelle
+- Ein Discord-Bot oder ein Webhook-Link
+- Optional: JSON- oder HTTP-Nodes in Node-RED
 
-##  How to Set It Up
+##  Einrichtung
 
-1. Clone this repo or import the Node-RED flow.
-2. Set up your Discord Webhook or bot token.
-3. Connect your DigiLab data source.
-4. Customize your flow to suit your needs.
-5. Deploy and test!
+1. Dieses Repository klonen oder den Node-RED Flow importieren.
+2. Discord Webhook oder Bot-Token einrichten.
+3. DigiLab-Datenquelle anschließen.
+4. Flow nach Bedarf anpassen.
+5. Deployen und testen!
 
-##  Example Use Case
+##  Beispiel
 
-> “When a new test result is ready in DigiLab, my Discord bot posts:  
-> ` New result available for Patient X - Test: CBC - Status: Completed`”
+> „Wenn ein neues Ergebnis in DigiLab verfügbar ist, postet der Discord-Bot z. B.:  
+> ` Neues Ergebnis für Patient X – Test: Blutbild – Status: Abgeschlossen`“
 
-##  Contributing
+##  Mitwirken
 
-Feel free to fork and improve the flow! Pull requests are welcome.
+Forks und Verbesserungen sind willkommen! Pull Requests gerne gesehen.
 
-##  License
+##  Lizenz
 
-MIT — use it freely.
+MIT – frei verwendbar.
 
 ---
 
-Made with  using Node-RED + Discord
+Erstellt mit ❤ dank Node-RED + Discord
