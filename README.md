@@ -1,45 +1,39 @@
-# DigiLab ↔ Discord Integration mit Node-RED
+# Digilab-Discord-Status mit Node-RED
 
-Dieses Projekt verbindet DigiLab mit einem Discord-Server mithilfe von **Node-RED**.
+Dieses Projekt verbindet ein Digilab-Gerät mit Discord über Node-RED.
 
-##  Was das Projekt macht
+## Ziel
 
-Sobald ein Ereignis in DigiLab passiert (z. B. ein neues Ergebnis oder eine Warnung), wird automatisch eine Nachricht in einem bestimmten Discord-Kanal gepostet.
+Wenn ich online bin, soll auf dem kleinen Digilab-Bildschirm angezeigt werden, dass ich online bin. Außerdem soll angezeigt werden, wenn jemand eine Nachricht auf Discord schreibt.
 
-##  Wie es funktioniert
+## Voraussetzungen
 
-- **Node-RED** hört auf Ereignisse von DigiLab.
-- Die Daten werden im Flow verarbeitet.
-- Danach wird eine formatierte Nachricht an Discord gesendet – entweder über einen Webhook oder einen Bot.
+- Node-RED installiert
+- Discord-Bot mit Token
+- Digilab-Gerät mit Bildschirm
+- Verbindung zwischen Node-RED und dem Bildschirm (z. B. seriell, MQTT oder HTTP)
 
-##  Voraussetzungen
+## Funktionen
 
-- Node-RED ist installiert und läuft
-- Zugriff auf die DigiLab-API oder Eventquelle
-- Ein Discord-Bot oder ein Webhook-Link
-- Optional: JSON- oder HTTP-Nodes in Node-RED
+- Zeigt auf dem Bildschirm an, wenn ich online bin
+- Zeigt neue Discord-Nachrichten live auf dem Bildschirm an
+- Läuft vollständig über Node-RED-Workflows
 
-##  Einrichtung
+## Einrichtung
 
-1. Dieses Repository klonen oder den Node-RED Flow importieren.
-2. Discord Webhook oder Bot-Token einrichten.
-3. DigiLab-Datenquelle anschließen.
-4. Flow nach Bedarf anpassen.
-5. Deployen und testen!
+1. Erstelle einen Discord-Bot und kopiere den Token.
+2. Installiere Node-RED und richte die folgenden Nodes ein:
+   - `discord-connector` (z. B. über ein Node-RED-Discord-Modul)
+   - `function`-Node zur Verarbeitung der Nachrichten
+   - Node zur Ausgabe auf dem Digilab-Bildschirm (je nach Verbindung)
+3. Integriere den Bot in deinen Discord-Server.
+4. Verbinde Node-RED mit dem Digilab-Gerät.
 
-##  Beispiel
+## Beispielanzeige
 
-> „Wenn ein neues Ergebnis in DigiLab verfügbar ist, postet der Discord-Bot z. B.:  
-> ` Neues Ergebnis für Patient X – Test: Blutbild – Status: Abgeschlossen`“
+- **Online-Status:** "Status: Online"
+- **Nachricht:** "Benutzer123: Hallo!"
 
-##  Mitwirken
+## Lizenz
 
-Forks und Verbesserungen sind willkommen! Pull Requests gerne gesehen.
-
-##  Lizenz
-
-MIT – frei verwendbar.
-
----
-
-Erstellt mit ❤ dank Node-RED + Discord
+Dieses Projekt steht unter der MIT-Lizenz.
