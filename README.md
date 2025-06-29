@@ -1,39 +1,19 @@
-# Digilab-Discord-Status mit Node-RED
+# Wetteranzeige auf Knopfdruck (Berlin)
 
-Dieses Projekt verbindet ein Digilab-Gerät mit Discord über Node-RED.
-
-## Ziel
-
-Wenn ich online bin, soll auf dem kleinen Digilab-Bildschirm angezeigt werden, dass ich online bin. Außerdem soll angezeigt werden, wenn jemand eine Nachricht auf Discord schreibt.
+Dieses Node-RED-Projekt zeigt auf Knopfdruck das aktuelle Wetter für Berlin an. Es verwendet die OpenWeatherMap API und ein digitales Display (DigiLab oder Dashboard).
 
 ## Voraussetzungen
+- Node-RED
+- OpenWeatherMap API-Key
+- Button (GPIO)
+- Display (z. B. OLED, LCD oder Dashboard UI)
 
-- Node-RED installiert
-- Discord-Bot mit Token
-- Digilab-Gerät mit Bildschirm
-- Verbindung zwischen Node-RED und dem Bildschirm (z. B. seriell, MQTT oder HTTP)
+## Anleitung
+1. Registriere dich bei https://openweathermap.org/api und kopiere deinen API-Key.
+2. Importiere den Flow in Node-RED.
+3. Ersetze `DEIN_API_KEY` mit deinem echten Schlüssel.
+4. Drücke den Button – das aktuelle Wetter in Berlin wird angezeigt.
 
-## Funktionen
+## Beispielausgabe
+Berlin: 21°C, klarer Himmel
 
-- Zeigt auf dem Bildschirm an, wenn ich online bin
-- Zeigt neue Discord-Nachrichten live auf dem Bildschirm an
-- Läuft vollständig über Node-RED-Workflows
-
-## Einrichtung
-
-1. Erstelle einen Discord-Bot und kopiere den Token.
-2. Installiere Node-RED und richte die folgenden Nodes ein:
-   - `discord-connector` (z. B. über ein Node-RED-Discord-Modul)
-   - `function`-Node zur Verarbeitung der Nachrichten
-   - Node zur Ausgabe auf dem Digilab-Bildschirm (je nach Verbindung)
-3. Integriere den Bot in deinen Discord-Server.
-4. Verbinde Node-RED mit dem Digilab-Gerät.
-
-## Beispielanzeige
-
-- **Online-Status:** "Status: Online"
-- **Nachricht:** "Benutzer123: Hallo!"
-
-## Lizenz
-
-Dieses Projekt steht unter der MIT-Lizenz.
