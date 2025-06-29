@@ -61,12 +61,6 @@ Ziel ist es, per Button-Druck im Node-RED Dashboard das aktuelle Wetter für Ber
 
 ---
 
-## 📈 GitHub Planner (öffentlich)
-
-> [→ Zum öffentlichen GitHub Planner](https://github.com/YOUR-USERNAME/YOUR-REPOSITORY/projects)  
-(Diesen Link musst du ersetzen mit deinem echten GitHub-Project-Board)
-
----
 
 ## 🧪 Tests & Qualitätssicherung
 
@@ -75,16 +69,4 @@ Ziel ist es, per Button-Druck im Node-RED Dashboard das aktuelle Wetter für Ber
 - **Grenzfall-Test**: Kein Internet? Falsche API-Antwort? → Anzeige testweise ersetzen
 - **Display-Test**: Korrekte Darstellung auf deinem DigiLab-Screen (kein Textüberlauf, saubere Ausgabe)
 
----
 
-## 🧭 Umsetzung der Planung
-
-Die Aufgaben aus dem GitHub Planner wurden in der geplanten Reihenfolge umgesetzt. Falls spontane Änderungen notwendig waren (z. B. API-Wechsel), 
-wurden diese dokumentiert und der Plan entsprechend angepasst.
-
----
-
-## 📦 API-Info: Open-Meteo Beispiel-URL (Berlin)
-
-```txt
-https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.405&current_weather=true
