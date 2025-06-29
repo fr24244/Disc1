@@ -69,4 +69,13 @@ Ziel ist es, per Button-Druck im Node-RED Dashboard das aktuelle Wetter für Ber
 - **Grenzfall-Test**: Kein Internet? Falsche API-Antwort? → Anzeige testweise ersetzen
 - **Display-Test**: Korrekte Darstellung auf deinem DigiLab-Screen (kein Textüberlauf, saubere Ausgabe)
 
+---
+
+
+## 📋 Projektplanung
+
+Alle Aufgaben, Fortschritt und Status findest du im öffentlichen GitHub Planner:
+
+👉 [Zum Projekt-Board auf GitHub](https://github.com/users/fr24244/projects/6)
+
 
