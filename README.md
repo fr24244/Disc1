@@ -1,30 +1,32 @@
-# Wetteranzeige auf Knopfdruck (Berlin)
+# Wetteranzeige auf Knopfdruck (Luxemburg & Belgien)
 
-Dieses Node-RED-Projekt zeigt auf Knopfdruck das aktuelle Wetter für Berlin an. Es verwendet die Open-Meteo API (kostenfrei, ohne API-Key) und ein digitales Display (z. B. DigiLab oder Node-RED Dashboard).
+Dieses Node-RED-Projekt zeigt auf Knopfdruck das aktuelle Wetter **für Luxemburg und Belgien** auf einem DigiLab-Display an. 
+Es nutzt die Open-Meteo API (kostenfrei, ohne API-Key) und läuft auf einem **Raspberry Pi** mit Node-RED.
 
 ---
 
 ## 🎯 Projektziel
 
-Ziel ist es, per Button-Druck im Node-RED Dashboard das aktuelle Wetter für Berlin abzurufen und auf einem Display anzuzeigen. Dies ist besonders nützlich in Bildungskontexten (z. B. Schul-Labor DigiLab), bei IoT-Experimenten oder zur Visualisierung von APIs.
+Ziel ist es, per Button-Druck auf dem DigiLab-Gerät (z. B. 2 Tasten) das aktuelle Wetter **für Luxemburg oder Belgien** abzurufen und auf einem Bildschirm anzuzeigen. Dieses Projekt eignet sich ideal für **Bildungszwecke**, **IoT-Experimente** oder als praktische Einführung in **API-Nutzung mit Node-RED**.
 
 ---
 
 ## 🛠 Verwendete Technologien
 
-- **Node-RED**: Für visuelle Programmierung und Steuerung des Datenflusses
-- **Open-Meteo API**: Kostenlose Wetterdaten ohne Registrierung
-- **Node-RED Dashboard / DigiLab Screen**: Anzeige der Wetterinformationen
-- **GitHub Projects (Planner)**: Für Aufgabenplanung und Projektmanagement
+- **Node-RED (auf Raspberry Pi)**: Visuelle Programmierung und Datenfluss-Steuerung  
+- **Open-Meteo API**: Kostenlose Wetterdaten ohne Registrierung  
+- **DigiLab-Display**: Anzeige der Wetterinformationen  
+- **Zwei physische Buttons**: Einer für Luxemburg, einer für Belgien  
+- **GitHub Projects (Planner)**: Aufgabenplanung und Dokumentation  
 
 ---
 
 ## 💡 Warum dieses Projekt besonders ist
 
-- Extrem einfache Umsetzung ohne API-Key
-- Realtime-Interaktion (Button → Wetterdaten in Echtzeit)
-- Ideal für Lernprojekte oder praktische Demonstrationen von REST-APIs
-- Modular erweiterbar (z. B. andere Städte, Sprachausgabe, Icons, etc.)
+- Kein API-Key notwendig → ideal für Schulen oder Workshops  
+- Zwei-Knopf-System: Je nach Button wird Luxemburg oder Belgien angezeigt  
+- Echtzeitdaten: Button drücken → Wetterdaten sofort auf dem Display  
+- Flexibel erweiterbar: Weitere Länder, Sprachausgabe, Icons etc. möglich  
 
 ---
 
@@ -34,48 +36,44 @@ Ziel ist es, per Button-Druck im Node-RED Dashboard das aktuelle Wetter für Ber
 
 | Aufgabe | Beschreibung | Zeit | Wichtigkeit |
 |--------|--------------|------|-------------|
-| 📌 Projektziel definieren | Klar formulieren, was erreicht werden soll | 30 min | Hoch |
+| 📌 Projektziel definieren | Ziel (Wetteranzeige für 2 Länder per Knopfdruck) festlegen | 30 min | Hoch |
 | 📌 API recherchieren | Wetter-API ohne Authentifizierung finden (Open-Meteo) | 30 min | Hoch |
-| 📌 GitHub Planner einrichten | Öffentlichen Projektplan erstellen | 15 min | Hoch |
+| 📌 GitHub Planner einrichten | Öffentliches Projekt-Board anlegen | 15 min | Hoch |
 
 ---
 
 ### Phase 2 – Entwicklung (Wichtigkeit: Hoch)
 
-| Aufgabe | Beschreibung | Zeit | Wichtigkeit |
+| Aufgabe | Beschreibung 
 |--------|--------------|------|-------------|
-| ⚙️ Node-RED vorbereiten | Button, HTTP-Request, Function, Display-Knoten erstellen | 1 h | Hoch |
-| ⚙️ API-Daten abrufen | Open-Meteo mit GET-Request abfragen | 30 min | Hoch |
-| ⚙️ JSON verarbeiten | Temperatur, Wind etc. extrahieren und als Text formatieren | 30 min | Hoch |
-| ⚙️ Ausgabe auf Display | Wettertext an DigiLab/Display senden | 30 min | Hoch |
+| ⚙️ Node-RED vorbereiten | Zwei Buttons, HTTP-Requests, Function- und Display-Knoten 
+| ⚙️ API-Daten abrufen | Open-Meteo mit GET-Request für beide Länder abfragen
+| ⚙️ JSON verarbeiten | Temperatur, Wind etc. extrahieren und formatieren 
+| ⚙️ Ausgabe auf Display | Je nach Button → passende Wetterdaten anzeigen 
 
 ---
 
 ### Phase 3 – Test & Optimierung (Wichtigkeit: Mittel)
 
-| Aufgabe | Beschreibung | Zeit | Wichtigkeit |
+| Aufgabe | Beschreibung 
 |--------|--------------|------|-------------|
-| ✅ Funktionstest | Mehrfach testen: Button → Anzeige → korrekt? | 30 min | Hoch |
-| ✅ Fehlerbehandlung | Catch Node bei API-Fehlern, Debug-Node prüfen | 30 min | Mittel |
-| ✅ Feintuning | Textlayout, Symbol oder weitere Infos | 30 min | Mittel |
+| ✅ Funktionstest | Beide Buttons testen: Anzeige korrekt? 
+| ✅ Fehlerbehandlung | API-Fehler mit Catch Node behandeln 
+| ✅ Feintuning | Textlayout, evtl. Flagge oder Stadtname anzeigen
 
 ---
-
 
 ## 🧪 Tests & Qualitätssicherung
 
-- **Manueller Funktionstest**: Mehrfaches Auslösen per Button
-- **Debug-Node**: Überprüfung des JSON-Outputs und Fehlermeldungen
-- **Grenzfall-Test**: Kein Internet? Falsche API-Antwort? → Anzeige testweise ersetzen
-- **Display-Test**: Korrekte Darstellung auf deinem DigiLab-Screen (kein Textüberlauf, saubere Ausgabe)
+- **Button-Test**: Beide Buttons mehrfach auslösen → korrekte Anzeige?  
+- **Debug-Node**: Kontrolle der API-Antworten & Fehler  
+- **Fallback-Szenarien**: Kein Netz? → Fehlertext anzeigen  
+- **Display-Test**: Ist Text gut lesbar? Kein Überlauf?
 
 ---
 
-
 ## 📋 Projektplanung
 
-Alle Aufgaben, Fortschritt und Status findest du im öffentlichen GitHub Planner:
+Alle Aufgaben, Fortschritte und den Status findest du hier:
 
 👉 [Zum Projekt-Board auf GitHub](https://github.com/users/fr24244/projects/6)
-
-
