@@ -1,74 +1,75 @@
-# Wetteranzeige auf Knopfdruck (Luxemburg & Belgien)
+# 🌦 Wetteranzeige für Nigeria per Knopfdruck
 
-Dieses Node-RED-Projekt zeigt auf Knopfdruck das aktuelle Wetter **für Luxemburg und Belgien** auf einem DigiLab-Display an. 
-Es nutzt die Open-Meteo API (kostenfrei, ohne API-Key) und läuft auf einem **Raspberry Pi** mit Node-RED.
+Dieses Node-RED-Projekt zeigt auf Knopfdruck das aktuelle Wetter **für Nigeria** auf einem DigiLab-Display an.  
+Ein zweiter Button leert den Bildschirm vollständig.  
+Es nutzt die **Open-Meteo API** (kostenfrei, ohne API-Key) und läuft auf einem **Raspberry Pi** mit Node-RED.
 
 ---
 
 ## 🎯 Projektziel
 
-Ziel ist es, per Button-Druck auf dem DigiLab-Gerät (z. B. 2 Tasten) das aktuelle Wetter **für Luxemburg oder Belgien** abzurufen und auf einem Bildschirm anzuzeigen. Dieses Projekt eignet sich ideal für **Bildungszwecke**, **IoT-Experimente** oder als praktische Einführung in **API-Nutzung mit Node-RED**.
+Ziel ist es, per Button-Druck auf dem DigiLab-Gerät:
+
+- Mit **Button 1** das aktuelle Wetter für **Nigeria** anzuzeigen  
+- Mit **Button 2** den Bildschirm vollständig zu **leeren**
+
+Ideal für **IoT-Projekte**, **Bildungszwecke** oder zum Lernen von **API-Anbindungen mit Node-RED**.
 
 ---
 
 ## 🛠 Verwendete Technologien
 
-- **Node-RED (auf Raspberry Pi)**: Visuelle Programmierung und Datenfluss-Steuerung  
-- **Open-Meteo API**: Kostenlose Wetterdaten ohne Registrierung  
-- **DigiLab-Display**: Anzeige der Wetterinformationen  
-- **Zwei physische Buttons**: Einer für Luxemburg, einer für Belgien  
-- **GitHub Projects (Planner)**: Aufgabenplanung und Dokumentation  
-
----
-
-## 💡 Warum dieses Projekt besonders ist
-
-- Kein API-Key notwendig → ideal für Schulen oder Workshops  
-- Zwei-Knopf-System: Je nach Button wird Luxemburg oder Belgien angezeigt  
-- Echtzeitdaten: Button drücken → Wetterdaten sofort auf dem Display  
-- Flexibel erweiterbar: Weitere Länder, Sprachausgabe, Icons etc. möglich  
+- **Node-RED (auf Raspberry Pi)**: Visuelle Steuerung und Logik  
+- **Open-Meteo API**: Kostenlose Wetterdaten (ohne Anmeldung)  
+- **DigiLab-Display**: Zeigt Wetterinfos oder wird geleert  
+- **Zwei physische Buttons**:  
+  - Button 1: Wetter anzeigen  
+  - Button 2: Display leeren  
 
 ---
 
 ## 📋 Projektphasen & Aufgaben
 
-### Phase 1 – Planung (Wichtigkeit: Hoch)
+### Phase 1 – Planung
 
-| 📌 Projektziel definieren | Ziel (Wetteranzeige für 2 Länder per Knopfdruck) festlegen 
-| 📌 API recherchieren | Wetter-API ohne Authentifizierung finden (Open-Meteo) 
-| 📌 GitHub Planner einrichten | Öffentliches Projekt-Board anlegen 
-
----
-
-### Phase 2 – Entwicklung (Wichtigkeit: Hoch)
-
-| ⚙️ Node-RED vorbereiten | Zwei Buttons, HTTP-Requests, Function- und Display-Knoten 
-| ⚙️ API-Daten abrufen | Open-Meteo mit GET-Request für beide Länder abfragen
-| ⚙️ JSON verarbeiten | Temperatur, Wind etc. extrahieren und formatieren 
-| ⚙️ Ausgabe auf Display | Je nach Button → passende Wetterdaten anzeigen 
+| Aufgabe | Beschreibung |
+|--------|--------------|
+| 📌 Ziel definieren | Wetteranzeige + Clear-Funktion |
+| 📌 API wählen | Open-Meteo (ohne Key) |
+| 📌 Städte koordinieren | Koordinaten für Nigeria (z. B. Lagos) |
 
 ---
 
-### Phase 3 – Test & Optimierung (Wichtigkeit: Mittel)
+### Phase 2 – Umsetzung
 
-
-| ✅ Funktionstest | Beide Buttons testen: Anzeige korrekt? 
-| ✅ Fehlerbehandlung | API-Fehler mit Catch Node behandeln 
-| ✅ Feintuning | Textlayout, evtl. Flagge oder Stadtname anzeigen
-
----
-
-## 🧪 Tests & Qualitätssicherung
-
-- **Button-Test**: Beide Buttons mehrfach auslösen  korrekte Anzeige?  
-- **Debug-Node**: Kontrolle der API-Antworten & Fehler  
-- **Fallback-Szenarien**: Kein Netz?  Fehlertext anzeigen  
-- **Display-Test**: Ist Text gut lesbar? Kein Überlauf?
+| Aufgabe | Beschreibung |
+|--------|--------------|
+| ⚙️ Node-RED einrichten | GPIO für zwei Buttons, HTTP-Request, Function & Display-Knoten |
+| ⚙️ API-Daten abrufen | Open-Meteo GET-Request für Nigeria |
+| ⚙️ JSON verarbeiten | Temperatur, Wind etc. extrahieren |
+| ⚙️ Display leeren | Zweiter Button löscht alle Inhalte vom Display |
 
 ---
 
-## 📋 Projektplanung
+### Phase 3 – Test & Optimierung
 
-Alle Aufgaben, Fortschritte und den Status findest du hier:
+| Aufgabe | Beschreibung |
+|--------|--------------|
+| ✅ Buttons testen | Funktionieren beide wie gewünscht? |
+| ✅ Fehler abfangen | Kein Netz? API down? → Fallback-Text |
+| ✅ Lesbarkeit prüfen | Passt Text auf das Display? Kein Überlauf? |
+
+---
+
+## 🧪 Tests & Qualität
+
+- **Button-Test**: Beide Buttons wiederholt testen  
+- **API-Check**: Rückgabewerte via Debug-Node prüfen  
+- **Display-Test**: Guter Kontrast? Text vollständig sichtbar?  
+- **Fallback**: Anzeige bei Fehlern wie „Kein Internet“  
+
+---
+
+## 🗂 GitHub-Projektplanung
 
 👉 [Zum Projekt-Board auf GitHub](https://github.com/users/fr24244/projects/6)
