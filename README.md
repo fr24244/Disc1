@@ -2,7 +2,7 @@
 
 Dieses Node-RED-Projekt zeigt auf Knopfdruck das aktuelle Wetter **für Nigeria** auf einem DigiLab-Display an.  
 Ein zweiter Button leert den Bildschirm vollständig.  
-Es nutzt die **Open-Meteo API** (kostenfrei, ohne API-Key) und läuft auf einem **Raspberry Pi** mit Node-RED.
+Es nutzt die **Open-Meteo API**  und läuft auf einem **Raspberry Pi** mit Node-RED.
 
 ---
 
@@ -20,7 +20,7 @@ Ideal für **IoT-Projekte**, **Bildungszwecke** oder zum Lernen von **API-Anbind
 ## 🛠 Verwendete Technologien
 
 - **Node-RED (auf Raspberry Pi)**: Visuelle Steuerung und Logik  
-- **Open-Meteo API**: Kostenlose Wetterdaten (ohne Anmeldung)  
+- **Open-Meteo API**: Kostenlose Wetterdaten  
 - **DigiLab-Display**: Zeigt Wetterinfos oder wird geleert  
 - **Zwei physische Buttons**:  
   - Button 1: Wetter anzeigen  
