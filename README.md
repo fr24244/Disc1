@@ -73,3 +73,10 @@ Ideal für **IoT-Projekte**, **Bildungszwecke** oder zum Lernen von **API-Anbind
 ## 🗂 GitHub-Projektplanung
 
 👉 [Zum Projekt-Board auf GitHub](https://github.com/users/fr24244/projects/6)
+
+---
+
+## Json
+
+
+👉 [Click here to view the Node-RED flow (JSON)](https://github.com/user-attachments/files/20985890/message.1.txt)
