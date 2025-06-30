@@ -34,18 +34,14 @@ Ziel ist es, per Button-Druck auf dem DigiLab-Gerät (z. B. 2 Tasten) das aktu
 
 ### Phase 1 – Planung (Wichtigkeit: Hoch)
 
-| Aufgabe | Beschreibung | Zeit | Wichtigkeit |
-|--------|--------------|------|-------------|
-| 📌 Projektziel definieren | Ziel (Wetteranzeige für 2 Länder per Knopfdruck) festlegen | 30 min | Hoch |
-| 📌 API recherchieren | Wetter-API ohne Authentifizierung finden (Open-Meteo) | 30 min | Hoch |
-| 📌 GitHub Planner einrichten | Öffentliches Projekt-Board anlegen | 15 min | Hoch |
+| 📌 Projektziel definieren | Ziel (Wetteranzeige für 2 Länder per Knopfdruck) festlegen 
+| 📌 API recherchieren | Wetter-API ohne Authentifizierung finden (Open-Meteo) 
+| 📌 GitHub Planner einrichten | Öffentliches Projekt-Board anlegen 
 
 ---
 
 ### Phase 2 – Entwicklung (Wichtigkeit: Hoch)
 
-| Aufgabe | Beschreibung 
-|--------|--------------|------|-------------|
 | ⚙️ Node-RED vorbereiten | Zwei Buttons, HTTP-Requests, Function- und Display-Knoten 
 | ⚙️ API-Daten abrufen | Open-Meteo mit GET-Request für beide Länder abfragen
 | ⚙️ JSON verarbeiten | Temperatur, Wind etc. extrahieren und formatieren 
@@ -55,8 +51,7 @@ Ziel ist es, per Button-Druck auf dem DigiLab-Gerät (z. B. 2 Tasten) das aktu
 
 ### Phase 3 – Test & Optimierung (Wichtigkeit: Mittel)
 
-| Aufgabe | Beschreibung 
-|--------|--------------|------|-------------|
+
 | ✅ Funktionstest | Beide Buttons testen: Anzeige korrekt? 
 | ✅ Fehlerbehandlung | API-Fehler mit Catch Node behandeln 
 | ✅ Feintuning | Textlayout, evtl. Flagge oder Stadtname anzeigen
@@ -65,9 +60,9 @@ Ziel ist es, per Button-Druck auf dem DigiLab-Gerät (z. B. 2 Tasten) das aktu
 
 ## 🧪 Tests & Qualitätssicherung
 
-- **Button-Test**: Beide Buttons mehrfach auslösen → korrekte Anzeige?  
+- **Button-Test**: Beide Buttons mehrfach auslösen  korrekte Anzeige?  
 - **Debug-Node**: Kontrolle der API-Antworten & Fehler  
-- **Fallback-Szenarien**: Kein Netz? → Fehlertext anzeigen  
+- **Fallback-Szenarien**: Kein Netz?  Fehlertext anzeigen  
 - **Display-Test**: Ist Text gut lesbar? Kein Überlauf?
 
 ---
